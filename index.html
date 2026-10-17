@@ -15,7 +15,24 @@
 </div><br>
 <p style="text-align: center;">
 <a href="http://slither.com/io" , target="_blank"><img src="robaki.gif"><br><img src="robaki.jpg"><br><img src="zostanrobak.gif">
-</a></p>
+</a></p><br>
+  <button id="przycisk">Włącz muzykę</button>
+<audio id="muzyka" src="roundabout.mp3" loop></audio>
+
+<script>
+  const audio = document.getElementById("muzyka");
+  const przycisk = document.getElementById("przycisk");
+
+  przycisk.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      przycisk.textContent = "Wyłącz muzykę";
+    } else {
+      audio.pause();
+      przycisk.textContent = "Włącz muzykę";
+    }
+  });
+</script>
 
 </body>
 </html>
